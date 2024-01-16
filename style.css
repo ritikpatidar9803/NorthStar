@@ -1,0 +1,605 @@
+@import url('https://fonts.googleapis.com/css2?family=Arimo:wght@400;500;600;700&family=Baloo+2&family=Lato:wght@100;300;400;700;900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+    font-style: normal;
+    font-family: 'Arimo', sans-serif;
+    font-family: 'Baloo 2', sans-serif;
+    font-family: 'Lato', sans-serif;
+    line-height: normal;
+    font-weight: 400;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+h2 {
+    font-size: 2.25rem;
+    color: #1D1D1D;
+    text-align: center;
+    font-family: Arimo;
+    font-weight: 700;
+    line-height: 3rem;
+}
+
+h3 {
+    color: #555;
+    text-align: center;
+    font-family: Lato;
+    font-size: 1.25rem;
+    font-weight: 400;
+    line-height: 3rem;
+    margin-top: 1rem;
+}
+
+h4 {
+    color: #1D1D1D;
+    text-align: center;
+    font-size: 1rem;
+    font-weight: 400;
+    font-family: Lato;
+}
+
+h5 {
+    color: #1D1D1D;
+    font-family: Lato;
+    font-size: 0.875rem;
+    font-weight: 400;
+    line-height: 1.75rem;
+}
+
+
+a {
+    color: #000;
+    text-align: center;
+    font-family: Arimo;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.6px;
+    cursor: pointer;
+}
+
+.wrapper {
+    max-width: 1368px;
+    margin: 0 auto;
+    padding: 0 4rem;
+}
+
+
+#loading {
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    background: #fff;
+    display: grid;
+    place-items: center;
+    z-index: 9999;
+}
+
+#loading img {
+    position: absolute;
+    animation: rotation 1.5s infinite;
+}
+
+@keyframes rotation {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+#loading h2 {
+    color: #565DFD;
+    font-family: 'Lato', sans-serif;
+    font-size: 28px;
+    font-weight: 400;
+}
+
+
+header {
+    padding: 2rem 4rem 1.1rem 4rem !important;
+    padding-top: 3rem;
+    padding-bottom: 1.1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    position: relative;
+
+}
+
+header .logo {
+    color: #1D1D1D;
+    text-align: center;
+    font-family: Lato;
+    font-size: 2.25rem;
+}
+
+nav {
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+}
+
+header .menu,
+header .btns {
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+}
+
+header .btns .cart {
+    position: relative;
+}
+
+header .btns .cart::before {
+    content: '5';
+    color: #FFF;
+    display: grid;
+    place-items: center;
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    width: 1.3125rem;
+    height: 1.3125rem;
+    background-color: #024E82;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 0.75rem;
+    z-index: 99;
+}
+
+header .hamburger {
+    display: none;
+}
+
+
+.hero-section-h1 {
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    font-size: 3rem;
+    font-weight: 800;
+    line-height: 100%;
+    color: #FFF;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.hero-section {
+    background-image: url("./images/img_1.png");
+    height: 648px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.hero-section .container {
+    display: flex;
+    height: 100%;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.hero-section .container .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+    width: 32rem;
+    padding-right: 2.375rem;
+    font-family: Lato;
+}
+
+
+.hero-section .content button {
+    border: 5px solid #FFF;
+    padding: 1.125rem 2.25rem;
+    background: transparent;
+    font-size: 1.3125rem;
+    font-weight: 700;
+    line-height: 1.375rem;
+    color: #FFF;
+    text-align: center;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.new-arrivals {
+    padding-top: 2.625rem !important;
+    padding-bottom: 2.625rem !important;
+}
+
+.products {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 1.25rem;
+    margin-top: 3rem;
+}
+
+.products .product img {
+    width: 100%;
+}
+
+.products h4.primary {
+    margin-top: 1rem;
+    font-weight: 800 !important;
+}
+
+.products h4.secondary {
+    margin-top: 0.375rem;
+    color: #024E82;
+}
+
+.benifits {
+    background: #FBFBFB;
+    padding: 2.625rem 0;
+}
+
+.benifits .content {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    padding-top: 3rem !important;
+    padding-bottom: 3rem !important;
+    gap: 4.625rem;
+}
+
+.benifits .content .benifit {
+    display: flex;
+    gap: 1.375rem;
+}
+
+.benifits .content .benifit h4 {
+    text-align: left;
+    font-weight: 800 !important;
+}
+
+.benifits .content .benifit h4.details-para {
+    color: #555;
+    font-weight: 400 !important;
+    margin-top: 0.5rem;
+}
+
+.promotion {
+    display: flex;
+    gap: 1.25rem;
+    height: 429px;
+    margin-top: 2.3125rem;
+}
+
+.promotion .first-promo,
+.promotion .second-promo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #000;
+}
+
+.promotion .first-promo {
+    width: calc(60% - 1.25rem);
+}
+
+.promotion .second-promo {
+    width: 40%;
+}
+
+.promotion h2 {
+    color: #FFF;
+    text-transform: uppercase;
+    font-family: Lato;
+}
+
+.promotion p {
+    color: #FFF;
+    text-align: center;
+    font-family: Lato;
+    font-size: 1.125rem;
+    line-height: 130%;
+    margin-top: 1.5rem;
+    width: 70%;
+}
+
+.promotion button {
+    color: #024E82;
+    text-align: center;
+    font-family: Lato;
+    font-size: 0.8rem;
+    line-height: 142%;
+    border: 0;
+    text-transform: uppercase;
+    background: #FFF;
+    padding: 0.8rem 2rem;
+    margin-top: 2rem;
+    width: fit-content;
+    box-shadow: 0px 6px 15px 0px rgba(0, 0, 0, 0.04);
+}
+
+.top-seller {
+    margin-top: 5.5625rem;
+    margin-bottom: 6.87rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.top-seller button {
+    color: #FFF;
+    text-align: center;
+    font-family: Lato;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 22px;
+    text-transform: uppercase;
+    padding: 1.125rem 2.25rem;
+    background: #024E82;
+    border: 0;
+    margin-top: 4.375rem;
+}
+
+footer {
+    background: #FBFBFB;
+    padding-top: 3.75rem;
+    padding-bottom: 2rem;
+}
+
+.footer-links {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    padding-bottom: 4.375rem;
+}
+
+.footer-links .links {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+}
+
+.footer-links .links h6 {
+    margin-bottom: 1.875rem;
+    color: #1D1D1D;
+    font-family: Arimo;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.6px;
+}
+
+.footer-links .links a {
+    color: #1D1D1D;
+    font-family: Lato;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.75rem;
+}
+
+.footer-links .links form input {
+    max-width: 15.81rem;
+    width: 80%;
+    border: 0;
+    padding: 1rem 0;
+    border-bottom: solid 1px #1D1D1D;
+    background: transparent;
+}
+
+.footer-links .links form button {
+    border: 0;
+    background: transparent;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+footer .line {
+    width: 100%;
+    height: 1px;
+    background: #E8E8E8;
+    margin-bottom: 2rem;
+}
+
+.reveal {
+    position: relative;
+    transform: translateY(150px);
+    opacity: 0;
+    transition: 1s all ease;
+}
+
+.reveal.active {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+
+@media(max-width: 980px) {
+    html {
+        font-size: 13px;
+    }
+}
+
+@media(max-width: 725px) {
+    html {
+        font-size: 12px;
+    }
+
+    .wrapper {
+        padding: 0 2rem;
+    }
+
+    header .logo {
+        font-size: 2.8rem;
+        z-index: 999;
+    }
+
+    header nav {
+        width: 100%;
+        height: 40vh;
+        position: absolute;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        background: #FFF;
+        left: 0;
+        top: 50px;
+        z-index: 3;
+        transition: all 2s ease;
+        transform: translateY(-150%);
+    }
+
+    header nav.active {
+        transform: translateY(0%);
+    }
+
+    header nav .menu {
+        flex-direction: column;
+    }
+
+    header .hamburger {
+        display: block;
+    }
+
+    .hero-section .container {
+        justify-content: center;
+    }
+
+    .promotion {
+        flex-direction: column;
+    }
+
+    .promotion .first-promo,
+    .promotion .second-promo {
+        width: 100%;
+        height: 429px
+    }
+
+    .benifits .content .benifit {
+        flex-direction: column;
+    }
+
+    .products {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .benifits .content {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .footer-links {
+        grid-template-columns: 1fr 1fr;
+        gap: 4rem 1rem;
+    }
+}
+
+@media(max-width: 580px) {
+    html {
+        font-size: 11px;
+    }
+}
+
+
+/* about us page style */
+.aboutus-hero {
+    background-image: url("./images/unsplash_7RIMS-NMsbc.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100vw;
+    display: flex;
+    align-items: end;
+    height: 348px;
+}
+
+.aboutus-hero .content {
+    padding-bottom: 4.375rem;
+    display: flex;
+    width: 100%;
+}
+
+.category {
+    display: grid;
+    gap: 2.5rem;
+    grid-template-columns: 1fr 1fr;
+    padding-top: 5.5rem;
+    height: 44.5rem;
+}
+
+.category .female,
+.category .male {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    padding-bottom: 2.31rem;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.category .female {
+    background-image: url("./images/unsplash_W7b3eDUb_2I.png");
+}
+
+.category .male {
+    background-image: url("./images/unsplash_a3RhaDG_pNM.png");
+}
+
+.category .buynow {
+    border-radius: 26px;
+    background: #FFF;
+    box-shadow: 0px 6px 15px 0px rgba(0, 0, 0, 0.04);
+    color: #14517B;
+    padding: 0.875rem 2.25rem;
+    text-align: center;
+    font-family: Lato;
+    font-size: 1.5rem;
+    font-weight: 400;
+    line-height: 20px;
+    text-transform: uppercase;
+    border: 0;
+}
+
+.founders {
+    padding-top: 6.66rem;
+    padding-bottom: 6.66rem;
+}
+
+.testimonials {
+    padding-top: 5.25rem;
+}
+
+.testimonial {
+    padding: 7.68rem 0;
+    display: flex;
+    align-items:center;
+    gap: 3rem;
+    width: 70%;
+    margin: 0 auto;
+}
+
+.testimonial h3 {
+    text-align: left;
+    color:#555;
+    font-family: Baloo;
+    font-size: 1.5rem;
+    font-weight: 800;
+    line-height: 2.25rem;
+}
+.testimonial h3.person-name{
+    margin-top: 2rem;
+}
+
+@media(max-width: 725px) {
+    .category{
+        grid-template-columns: 1fr;
+        height: 850px;
+    }
+    .testimonial{
+        flex-direction: column;
+        padding: 5rem 0;
+    }
+    .testimonial .image img{
+        height: 125px;
+    }
+}
